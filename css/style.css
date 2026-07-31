@@ -1,0 +1,277 @@
+/* RESET */
+*{  /* * is een selector. Het betekent: Selecteer alle HTML-elementen op de pagina.*/
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* NAVBAR */
+.navbar{ /*Het punt betekent: Zoek een element met deze class.*/
+    background:#171717;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+}
+
+.logo img{
+    height:55px;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:18px;
+    letter-spacing:1px;
+    transition:0.3s;
+}
+
+.menu a:hover{  /*Zoek alle <a>-elementen die zich binnen .menu bevinden. :hover = Dit is een pseudo-class. Ee pseudo-class beschrijft een toestand van een element. hover betekent: Wanneer de muis boven het element hangt.*/
+    color:#b7b07a;
+}
+
+.contact-btn{
+    background:#8e8b5b;
+    color:white;
+    text-decoration:none;
+    padding:14px 26px;
+    border-radius:4px;
+    font-size:14px;
+    text-transform:uppercase;
+    transition:0.3s;
+}
+
+.contact-btn:hover{
+    background:#a39f6f;
+}
+
+/* ======================================
+   HERO
+====================================== */
+.hero{ /*Achtergrond instellen*/
+    position:relative; /*Alles wat ín deze hero-sectie komt, mag zich ten opzichte van deze sectie positioneren. = nodig voor de overlay*/
+    height:820px;
+    background-image:url("../images/hero.jpg");
+    background-size:cover;
+    background-position: 65% center;
+    background-repeat:no-repeat;
+    overflow: hidden; 
+}
+
+.hero::before{ /*Maak een extra laag vóór de inhoud. Je hoeft daarvoor niets in HTML te zetten.*/
+    content:""; /*De browser maakt een leeg element. Zonder deze regel verschijnt de overlay niet.*/
+    position:absolute; /*Hiermee mag de laag exact geplaatst worden.*/
+    top:0; /*Begint helemaal bovenaan.*/
+    left:0; /*Begint helemaal links.*/
+    width:100%; /*Wordt even breed als de hero.*/
+    height:100%; /*Wordt even hoog als de hero.*/
+    background:rgba(0,0,0,0.15); /*Donkere transparantie*/
+    z-index:1; /*Werkt als lagen. Geeft de positie aan op welke laag de overlay zich bevindt*/
+}
+
+.hero-content{ /*De container op de juiste plaats zetten*/
+    position: relative;
+    z-index: 2;
+    width: 900px; /*De tekst mag maximaal 600 pixels breed zijn.*/
+    padding-top: 120px; /*De inhoud komt 120 pixels onder de bovenkant van de afbeelding.*/
+    margin-left: 60px; /*De inhoud komt 60 pixels van de linkerkant.*/
+    padding-left: 8%; /*schaalt mee met de breedte van het scherm.*/
+}
+
+.hero-subtitle{  /*Gezond, Sterk & In balans*/
+    font-size: 20px; 
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #7b7754;
+    margin-bottom: 20px;
+}
+
+.hero-title{ /*Hondenfitness & Fotografie*/
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 0.9; /*De afstand tussen de twee regels wordt iets kleiner*/
+    color: #fdf9f9;
+    margin-bottom: 35px; /*Laat ruimte vrij voor de tekst die onder de titel komt*/
+}
+.hero-line2{
+    display: block;
+    white-space: nowrap; /* voorkomt afbreken naar regel 3 */
+    margin-left: 190px;
+}
+
+.hero-text{
+    width: 630px;
+    margin-top: 25px;
+    font-size: 25px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+}
+
+.hero-buttons{
+    display: flex; /*flex zorgt ervoor dat de knoppen naast elkaar komen te staan*/
+    gap: 20px; /*20px ruimte tussen de knoppen*/
+    margin-top: 40px;
+}
+
+.btn{ /*Basisopmaak voor de knoppen*/
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 50px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    display: inline-flex;
+     align-items: center;     /* icoon en tekst netjes verticaal centreren */
+    gap: 11px;  /* ruimte tussen icoon en tekst */
+}
+
+.btn-primary{
+    background: #8e8b5b;
+    color: white;
+}
+
+.btn-secondary{
+    border: 2px solid #8e8b5b;
+    color: white;
+}
+
+.btn:hover{
+    transform: translateY(-3px); /*Wanneer je met de muis over een knop gaat, schuift hij 3 pixels omhoog.*/
+}
+
+.social-icons{ /*Icoontjes van sociale media rechts op de pagina plaatsen*/
+    position:absolute; /*Haal dit element uit de normale documentstroom en laat mij zelf bepalen waar het komt.*/
+    right:40px; /*Plaats dit element 40 pixels van de rechterrand.*/
+    top:50%; /*Begin op de helft van de hoogte van de hero. Dat is niet hetzelfde als centreren.*/
+    transform:translateY(-50%); /*Dat verschuift het element nog een halve eigen hoogte omhoog. Daardoor staat het perfect verticaal gecentreerd.*/
+    z-index:2; 
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.social-icons a{ /*Linken opmaken*/
+    color:white;
+    text-decoration:none;
+    font-size:32px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:#b7b07a;
+    transform:scale(1.2); /*Maak het element 20% groter.*/
+}
+
+.wave{
+    position:absolute;
+    bottom:-1px;
+    left:0;
+    width:100%;
+    z-index:3;   /* zorgt dat de golf boven de donkere overlay ligt */
+}
+
+.wave svg{
+    display:block;
+    width:100%;
+    height:100px;
+}
+
+/* ======================================
+   OVER ONS
+====================================== */
+.about{
+    background:rgb(224, 218, 218);
+    padding: 80px 100px;
+}
+
+.about-container{
+    display:flex;
+    justify-content:space-between;
+    gap:100px;
+}
+
+.about-item{
+    flex:1;
+}
+
+.about-item i{
+    font-size:40px;
+    color:#8e8b5b;
+    margin-bottom:15px;
+}
+
+.about-item h3{
+    font-size:30px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:14px;
+    color:#171717;
+}
+
+.about-item p{
+    font-size:22px;
+    line-height:1.6;
+    color:#555;
+    margin-bottom:12px;
+}
+
+.about-item a{
+    font-size:20px;
+    color:#8e8b5b;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.about-item a:hover{
+    text-decoration:underline;
+}
+
+/* ======================================
+   INFO BAR
+====================================== */
+.info-bar{
+    background:#171717;
+    padding:30px 60px;
+}
+
+.info-bar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:white;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.info-item i{
+    font-size:20px;
+    color:white;
+}
+
+.info-item:not(:last-child){
+    border-right:1px solid rgba(255,255,255,0.2);
+    padding-right:40px;
+}
