@@ -275,3 +275,97 @@ body{
     border-right:1px solid rgba(255,255,255,0.2);
     padding-right:40px;
 }
+
+/* ======================================
+   PAGE HERO (subpaginas)
+====================================== */
+.page-hero{
+    background:#d9d3d3;
+    padding:70px 32px 50px;
+    text-align:center;
+}
+
+.page-hero-subtitle{
+    font-size:14px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#7b7754;
+    margin-bottom:14px;
+}
+
+.page-hero-title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:48px;
+    font-weight:500;
+    color:#171717;
+    margin-bottom:18px;
+}
+
+.page-hero-text{
+    max-width:500px;
+    margin:0 auto;
+    font-size:16px;
+    line-height:1.7;
+    color:#555;
+}
+
+/* ======================================
+   WHY SECTION
+====================================== */
+.why-section{
+    padding:70px 60px;
+}
+
+.why-container{
+    display:flex; /*display:flex op .why-container zet tekst en foto naast elkaar, elk met flex:1 zodat ze evenveel ruimte innemen.*/
+    align-items:flex-start; /*Nu blijft de foto netjes bovenaan staan in plaats van verticaal gecentreerd te worden tegenover de veel langere tekst.*/
+    gap:60px;
+}
+
+.why-text{
+    flex:1;
+}
+
+.why-text h2{
+    font-size:24px;
+    font-weight:500;
+    color:#171717;
+    margin-bottom:18px;
+}
+
+.why-text p{
+    font-size:16px;
+    line-height:1.7;
+    color:#555;
+    margin-bottom:16px;
+}
+
+.why-image{
+    flex:1;
+    position:sticky; /*De foto blijft staan tijdens het scrollen*/
+    top:100px;
+}
+
+.why-image img{
+    width:100%;
+    height:480px;
+    object-fit:cover; /*object-fit:cover op de afbeelding zorgt ervoor dat de foto altijd de volledige .why-image-ruimte vult zonder vervormd te worden — de foto wordt indien nodig een beetje "bijgesneden".*/
+    border-radius:8px; /*border-radius:8px geeft de foto lichtjes afgeronde hoeken, passend bij de rest van je site (knoppen hebben ook afgeronde hoeken).*/
+    display:block;
+}
+
+.why-text ul{
+    margin:0 0 20px 20px;
+    padding:0;
+}
+
+.why-text ul li{
+    font-size:16px;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:6px;
+}
+
+.why-text ul li::marker{
+    color:#8e8b5b;
+}
