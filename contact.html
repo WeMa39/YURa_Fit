@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - YURa Fit</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+        <!--Font Awesome toevoegen-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> 
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+
+                <div class="logo">
+                    <img src="images/logo.png" alt="Yurafit Logo">
+                </div>
+
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="hondenfitness.html">Hondenfitness</a></li>
+                    <li><a href="fotografie.html">Fotografie</a></li>
+                    <li><a href="overmij.html">Over mij</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <a href="contact.html" class="contact-btn">
+                    Contacteer mij
+                </a>
+            </nav>
+        </header>
+
+        <section class="page-hero">
+            <p class="page-hero-subtitle">
+                We horen graag van je
+            </p>
+            <h1 class="page-hero-title">
+                Contact
+            </h1>
+            <p class="page-hero-text">
+                Heb je een vraag of wil je graag een afspraak maken? Stuur gerust een mailtje of vul het onderstaande formulier in.
+            </p>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-container">
+
+                <form class="contact-form">
+                    <label for="naam">Naam *</label>
+                    <input type="text" id="naam" name="naam" required>
+
+                    <label for="email">E-mailadres *</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="bericht">Bericht *</label>
+                    <textarea id="bericht" name="bericht" rows="6" required></textarea>
+
+                    <button type="submit" class="btn btn-primary">Verzenden</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Adres</h3>
+                    <p>Groenhof 39<br>3890 Jeuk</p>
+
+                    <h3>Contact</h3>
+                    <p>Tel.: <a href="tel:0497334769">0497/33 47 69</a><br>
+                    Mail: <a href="mailto:info@yurafit.be">info@yurafit.be</a></p>
+
+                    <h3>Openingsuren</h3>
+                    <p>Woensdag: 9u00 - 19u00<br>
+                    Vrijdag: 14u00 - 19u00<br>
+                    Zaterdag: 9u00 - 12u00</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Hier kan je ons vinden</h2>
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps?q=Groenhof+39,+3890+Jeuk&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+         <!-- ======================================
+            VOETTEKST
+        ====================================== -->
+        <section class="info-bar">
+            <div class="info-bar-container">
+
+                <div class="info-item">
+                    <i class="fa-solid fa-paw"></i>
+                    <span>Persoonlijke aanpak</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <span>Oefeningen op maat</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-regular fa-eye"></i>
+                    <span>Oog voor welzijn</span>
+                </div>
+
+                <div class="info-item">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Herinneringen voor het leven</span>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
