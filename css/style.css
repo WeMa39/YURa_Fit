@@ -1,4 +1,9 @@
 /* RESET */
+html, body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
 *{  /* * is een selector. Het betekent: Selecteer alle HTML-elementen op de pagina.*/
     margin:0;
     padding:0;
@@ -392,6 +397,10 @@ body{
     gap:24px;
 }
 
+.programs-grid.photography-grid{ /*Door de extra klasse photography-grid toe te voegen naast programs-grid in je HTML, kan je dezelfde basisopmaak hergebruiken, maar toch een ander aantal kolommen instellen — dit heet een "modifier"-klasse.*/
+    grid-template-columns:repeat(3, 1fr);
+}
+
 .program-card{
     background:white;
     border-radius:12px;
@@ -629,4 +638,512 @@ body{
     height:400px;
     border-radius:8px;
     overflow:hidden;
+}
+
+/* ======================================
+   INFO SECTION (praktische info)
+====================================== */
+.info-section{  /*.info-section hergebruikt bewust géén grijze achtergrond (in tegenstelling tot .programs-section), zodat er visuele afwisseling ontstaat tussen de secties op je pagina — wit, dan grijs, dan weer wit, dan de olijfgroene CTA-knop als afsluiter. Dat voorkomt dat de pagina "plat" aanvoelt.*/
+    padding:60px 60px;
+}
+
+.info-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    max-width:900px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.info-block{
+    flex:1;
+}
+
+.info-block i{
+    font-size:26px;
+    color:#8e8b5b;
+    margin-bottom:14px;
+}
+
+.info-block h3{
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:#171717;
+    margin-bottom:10px;
+}
+
+.info-block p{
+    font-size:14px;
+    line-height:1.6;
+    color:#555;
+}
+
+/* ======================================
+   GALLERY SECTION (Portfolio)
+====================================== */
+.gallery-section{
+    padding:60px 60px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:8px;
+}
+
+.gallery-item img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+    transition:0.4s;
+}
+
+.gallery-item img:hover{
+    transform:scale(1.05);
+}
+
+/* ======================================
+   LINKS SECTION (Fotografie.html)
+====================================== */
+.links-section{
+    background:rgb(224, 218, 218);
+    padding:50px 60px;
+}
+
+.links-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:24px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.link-card{
+    display:flex; /*binnen elke .link-card zet icoon, tekst en pijltje netjes op één rij, met margin-left:auto op de pijl zodat die automatisch helemaal rechts uitlijnt.*/
+    align-items:center;
+    gap:18px;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:22px 24px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.link-card:hover{
+    border-color:#8e8b5b;
+    transform:translateY(-3px); /*geeft een subtiele hover-interactie, zodat duidelijk is dat de hele kaart klikbaar is (niet enkel de tekst).*/
+}
+
+.link-card > i:first-child{
+    font-size:26px;
+    color:#8e8b5b;
+    flex-shrink:0;
+}
+
+.link-card h3{
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:#171717;
+    margin-bottom:4px;
+}
+
+.link-card p{
+    font-size:13px;
+    color:#555;
+    line-height:1.5;
+}
+
+.link-arrow{
+    margin-left:auto;
+    color:#8e8b5b;
+    font-size:16px;
+    flex-shrink:0;
+}
+
+/* ======================================
+   INTRO SECTION (Wedstrijdfoto's)
+====================================== */
+.intro-section{
+    padding:40px 60px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+}
+
+.intro-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    max-width:900px;
+    margin:0 auto;
+    width:100%;
+}
+
+.intro-container p{
+    font-size:15px;
+    line-height:1.7;
+    color:#555;
+    max-width:600px;
+}
+
+.instagram-btn{ /*.instagram-btn heeft een linear-gradient die de bekende Instagram-kleuren nabootst — dit is de enige plek in je hele site waar je een verloop gebruikt, wat bewust is: het herkenningspunt van het Instagram-logo weegt hier zwaarder dan visuele consistentie met de rest van je (verder vlakke) site.*/
+    width:48px;
+    height:48px;
+    border-radius:8px;
+    background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:22px;
+    text-decoration:none;
+    flex-shrink:0;
+    transition:0.3s;
+}
+
+.instagram-btn:hover{
+    transform:scale(1.08);
+}
+
+/* ======================================
+   EVENTS SECTION
+====================================== */
+.events-section{
+    background:rgb(224, 218, 218);
+    padding:50px 60px;
+}
+
+.events-container{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.events-container h2{
+    font-size:20px;
+    font-weight:600;
+    color:#171717;
+    margin-bottom:24px;
+}
+
+.event-card{ /*.event-card gebruikt flex-wrap:wrap, zodat de knoppen automatisch onder de titel/datum vallen op een smaller scherm in plaats van de kaart te doen overlopen.*/
+    background:white;
+    border-radius:8px;
+    padding:20px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:16px;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.event-card:last-child{
+    margin-bottom:0;
+}
+
+.event-info h3{
+    font-size:16px;
+    font-weight:600;
+    color:#171717;
+    margin-bottom:4px;
+}
+
+.event-info p{
+    font-size:13px;
+    color:#888;
+}
+
+.event-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.event-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 18px;
+    border-radius:4px;
+    font-size:13px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.event-btn-outline{
+    border:1px solid #ccc;
+    color:#171717;
+}
+
+.event-btn-outline:hover{
+    border-color:#8e8b5b;
+    color:#8e8b5b;
+}
+
+.event-btn-filled{
+    background:#8e8b5b;
+    color:white;
+}
+
+.event-btn-filled:hover{
+    background:#a39f6f;
+}
+
+/* ======================================
+   PRICING SECTION
+====================================== */
+.pricing-section{
+    padding:60px;
+}
+
+.pricing-container{ /*.pricing-container met grid-template-columns:1fr 1fr zet de twee boxen (Prijzen / Hoe bestellen) mooi naast elkaar, elk met evenveel breedte.*/
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.pricing-box{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:26px 28px;
+}
+
+.pricing-box h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:16px;
+    font-weight:600;
+    color:#171717;
+    margin-bottom:20px;
+}
+
+.pricing-box h3 i{
+    color:#8e8b5b;
+    font-size:16px;
+}
+
+.pricing-box h4{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    color:#888;
+    margin:18px 0 10px;
+}
+
+.price-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    color:#555;
+    margin-bottom:10px;
+}
+
+.price-row span:last-child{
+    font-weight:500;
+    color:#171717;
+}
+
+.step-row{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:14px;
+}
+
+.step-row:last-child{
+    margin-bottom:0;
+}
+
+.step-number{ /*.step-number hergebruikt hetzelfde ronde-cirkel-patroon als je eerder al zag in het mockup-voorbeeld, opgebouwd met border-radius:50% op een vast breedte/hoogte-vak.*/
+    background:#8e8b5b;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    flex-shrink:0;
+}
+
+.step-row p{
+    font-size:13px;
+    color:#555;
+    line-height:1.6;
+}
+
+/* ======================================
+   NAVIGATIEBAR RESPONSIVE MAKEN 
+====================================== */
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    color:white;
+    font-size:26px;
+    cursor:pointer;
+}
+
+@media (max-width: 768px){
+    .hamburger{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#171717;
+        flex-direction:column;
+        gap:0;
+        padding:10px 0;
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .menu li{
+        width:100%;
+        text-align:center;
+    }
+
+    .menu a{
+        display:block;
+        padding:16px 20px;
+    }
+
+    .hero{
+        height:auto;
+        min-height:600px;
+    }
+
+    .hero-content{
+        width:100%;
+        padding-top:100px;
+        margin-left:0;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .hero-title{
+        font-size:48px;
+    }
+
+    .hero-line2{
+        margin-left:60px;
+    }
+
+    .hero-text{
+        width:100%;
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .btn{
+        padding:16px 30px;
+        justify-content:center;
+    }
+
+    .social-icons{
+        display:none;
+    }
+
+    .wave svg{
+        height:50px;
+    }
+
+    .about{
+        padding:40px 24px;
+    }
+
+    .about-container{
+        flex-direction:column;
+        gap:32px;
+    }
+
+    .about-item{
+        max-width:100%;
+    }
+
+    .info-bar{
+        padding:24px 20px;
+    }
+
+    .info-bar-container{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .info-item:not(:last-child){
+        border-right:none;
+        padding-right:0;
+        border-bottom:1px solid rgba(255,255,255,0.2);
+        padding-bottom:16px;
+        width:100%;
+    }
+
+    .page-hero{
+        padding:50px 20px 36px;
+    }
+
+    .page-hero-title{
+        font-size:32px;
+    }
+
+    .why-section{
+        padding:40px 20px;
+    }
+
+    .why-container{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .why-image{
+        position:static;
+    }
+
+    .why-image img{
+        height:auto;
+    }
+
+    .programs-section{
+        padding:40px 20px;
+    }
+
+    .programs-grid,
+    .programs-grid.photography-grid{
+        grid-template-columns:1fr;
+    }
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .contact-btn{
+        display:none;
+    }
 }
