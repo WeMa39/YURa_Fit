@@ -23,6 +23,7 @@ body{
     justify-content:space-between;
     align-items:center;
     padding:0 60px;
+    position:relative;
 }
 
 .logo img{
@@ -1014,6 +1015,7 @@ body{
         flex-direction:column;
         gap:0;
         padding:10px 0;
+        z-index:999;
     }
 
     .menu.active{
@@ -1145,5 +1147,66 @@ body{
 
     .contact-btn{
         display:none;
+    }
+    .contact-section{
+        padding:40px 20px;
+    }
+
+    .contact-container{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .map-section{
+        padding:0 20px 40px;
+    }
+    .gallery-section{
+        padding:40px 20px;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .gallery-item img{
+        height:180px;
+    }
+    .links-section{
+        padding:40px 20px;
+    }
+
+    .links-grid{
+        grid-template-columns:1fr;
+    }
+    .info-section{
+        padding:40px 20px;
+    }
+
+    .info-container{
+        flex-direction:column;
+        gap:28px;
+    }
+    .events-section,
+    .pricing-section{
+        padding:40px 20px;
+    }
+
+    .event-card{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .event-buttons{
+        width:100%;
+    }
+
+    .event-btn{
+        flex:1;
+        justify-content:center;
+    }
+
+    .pricing-container{
+        grid-template-columns:1fr;
     }
 }
