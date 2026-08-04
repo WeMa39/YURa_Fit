@@ -621,6 +621,100 @@ body{
 }
 
 /* ======================================
+   INFO CARDS (Contact)
+====================================== */
+.info-cards{
+    display:flex;
+    gap:24px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.info-card{
+    flex:1;
+    background:#f4f1ea;
+    border-radius:10px;
+    padding:50px;
+}
+
+.info-card h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:24px;
+    font-weight:500;
+    color:#171717;
+    margin-bottom:22px;
+}
+
+.info-row{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:18px;
+}
+
+.info-row:last-child{
+    margin-bottom:0;
+}
+
+.info-icon{
+    width:36px;
+    height:36px;
+    background:#8e8b5b;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:14px;
+    flex-shrink:0;
+}
+
+.info-row p{
+    font-size:15px;
+    line-height:1.6;
+    color:#333;
+}
+
+.info-row a{
+    color:#333;
+    text-decoration:none;
+}
+
+.info-row a:hover{
+    color:#8e8b5b;
+}
+
+.hours-row{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #e0dcd0;
+    font-size:14px;
+    align-items:center;
+    gap:16px;
+    align-items:center;
+    gap:16px;
+}
+
+.hours-row:last-child{
+    border-bottom:none;
+}
+
+.hours-row span:first-child{
+    font-weight:600;
+    color:#171717;
+}
+
+.hours-row span:last-child{
+    color:#555;
+    white-space:nowrap;
+}
+
+.hours-row .closed{
+    color:#999;
+}
+
+/* ======================================
    MAP SECTION
 ====================================== */
 .map-section{
@@ -1203,9 +1297,11 @@ body{
         padding:40px 20px;
     }
 
-    .contact-container{
+    .info-cards{
         flex-direction:column;
-        gap:40px;
+        gap:24px;
+        max-width:1100px;
+        margin:0 auto;
     }
 
     .map-section{
