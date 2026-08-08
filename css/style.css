@@ -1216,9 +1216,22 @@ body{
 
     .info-cards{
         display:flex;
-        gap:24px;
-        max-width:1000px;
+        flex-direction:column;
+        gap:20px;
+        max-width:100%;
         margin:0 auto;
+    }
+
+    .info-card{
+        padding:28px;
+    }
+
+    .info-card h3{
+        font-size:24px;
+    }
+
+    .map-wrapper{
+        height:280px;
     }
 
     .map-section{
