@@ -253,7 +253,7 @@ body{
 ====================================== */
 .info-bar{
     background:#171717;
-    padding:30px 60px;
+    padding:15px 60px;
 }
 
 .info-bar-container{
@@ -280,6 +280,21 @@ body{
 .info-item:not(:last-child){
     border-right:1px solid rgba(255,255,255,0.2);
     padding-right:40px;
+}
+
+/* ======================================
+   CREDIT FOOTER
+====================================== */
+.credit-footer{
+    background:#171717;
+    padding:5px 20px;
+    text-align:right;
+}
+
+.credit-footer p{
+    color:rgba(255,255,255,0.5);
+    font-size:10px;
+    letter-spacing:0.5px;
 }
 
 /* ======================================
