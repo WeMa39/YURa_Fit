@@ -73,27 +73,33 @@
                 <h2>Wedstrijden 2026</h2>
                 <div class="events-grid">
                     <div class="event-card">
-                        <div class="event-info">
-                            <h3>Fly On</h3>
-                            <p>3 augustus 2026</p>
+                        <div class="event-top">
+                            <div class="event-info">
+                                <h3>Fly On</h3>
+                                <p>3 augustus 2026</p>
+                            </div>
+                            <div class="event-buttons">
+                                <a href="https://yurafit.pixieset.com/flyonagilitywedstrijd/" class="event-btn event-btn-outline pixieset-link" target="_blank">
+                                    <i class="fa-solid fa-camera"></i> Bekijk foto's
+                                </a>
+                            </div>
                         </div>
-                        <div class="event-buttons">
-                            <a href="https://yurafit.pixieset.com/flyonagilitywedstrijd/" class="event-btn event-btn-outline">
-                                <i class="fa-solid fa-camera"></i> Bekijk foto's
-                            </a>
-                        </div>
+                        <p class="event-warning">⚠️ Niet bestellen via het winkelmandje — volg de stappen hieronder!</p>
                     </div>
 
                     <div class="event-card">
-                        <div class="event-info">
-                            <h3>...</h3>
-                            <p>**/**/**</p>
+                        <div class="event-top">
+                            <div class="event-info">
+                                <h3></h3>
+                                <p>** ** **</p>
+                            </div>
+                            <div class="event-buttons">
+                                <a href="https://yurafit.pixieset.com/flyonagilitywedstrijd/" class="event-btn event-btn-outline pixieset-link" target="_blank">
+                                    <i class="fa-solid fa-camera"></i> Bekijk foto's
+                                </a>
+                            </div>
                         </div>
-                        <div class="event-buttons">
-                            <a href="#" class="event-btn event-btn-outline">
-                                <i class="fa-solid fa-camera"></i> Bekijk foto's
-                            </a>
-                        </div>
+                        <p class="event-warning">⚠️ Niet bestellen via het winkelmandje — volg de stappen hieronder!</p>
                     </div>
                 </div>
             </div>
@@ -193,6 +199,28 @@
             <p>Website door Wendy Marsoul</p>
         </footer>
         
+        <!-- ======================================
+            POP-UP venster
+        ====================================== -->
+        <div class="modal-overlay" id="pixiesetModal">
+            <div class="modal-box">
+                <h3>Let op voor je verdergaat</h3>
+                <p>Lees eerst de stappen bij <b>"Hoe bestellen?"</b>.</p>
+                <p><b>Bestel NIET</b> via het winkelmandje op deze pagina.</p>
+                <p><b>Zo bestel je juist:</b></p>
+                <ol>
+                    <li>Klik op de hartjes bij je favoriete foto's</li>
+                    <li>Open je lijst rechtsboven</li>
+                    <li>Verstuur je lijst naar mij via het vliegtuigje-icoon</li>
+                </ol>
+                <div class="modal-buttons">
+                    <button class="modal-btn modal-cancel" id="modalCancel">Annuleren</button>
+                    <button class="modal-btn modal-ok" id="modalOk">Ok, verdergaan</button>
+                </div>
+            </div>
+        </div>
+
+
         <script src="js/script.js"></script>
         
     </body>

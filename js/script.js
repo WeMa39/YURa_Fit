@@ -32,3 +32,37 @@ filterButtons.forEach(function(button){
 
     });
 });
+
+
+const pixiesetLinks = document.querySelectorAll('.pixieset-link');
+const modal = document.getElementById('pixiesetModal');
+const modalOk = document.getElementById('modalOk');
+const modalCancel = document.getElementById('modalCancel');
+let pendingUrl = null;
+
+pixiesetLinks.forEach(function(link){
+    link.addEventListener('click', function(event){
+        event.preventDefault();
+        pendingUrl = link.href;
+        modal.classList.add('active');
+    });
+});
+
+modalOk.addEventListener('click', function(){
+    modal.classList.remove('active');
+    if(pendingUrl){
+        window.open(pendingUrl, '_blank');
+    }
+});
+
+modalCancel.addEventListener('click', function(){
+    modal.classList.remove('active');
+    pendingUrl = null;
+});
+
+modal.addEventListener('click', function(event){
+    if(event.target === modal){
+        modal.classList.remove('active');
+        pendingUrl = null;
+    }
+});
